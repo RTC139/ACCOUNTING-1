@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style2.css">
     <script src="scripts/auth.js" defer></script>
     <script src="scripts/storage.js" defer></script>
+    <script src="scripts/sidebar.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -18,10 +19,25 @@
                 <a href="pages/assistant.html" class="nav-item">Assistant</a>
             </div>
             <div class="user-profile">
-                <img src="Accountant pic.png" alt="User Profile" class="profile-icon">
+                <img src="Accountant pic.png" alt="User Profile" class="profile-icon" id="profile-toggle">
                 <div id="username-display">(Username)</div>
             </div>
         </nav>
+        
+        <!-- Profile sidebar -->
+        <div id="profile-sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="pages/profile.html">Profile</a></li>
+                    <li><a href="pages/settings.html">Settings</a></li>
+                    <li><a href="pages/history.html">Activity</a></li>
+                    <li><a href="#" id="logout-button">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Overlay for closing sidebar when clicking outside -->
+        <div id="sidebar-overlay"></div>
         
         <div class="hero-content">
             <h1>BIG A$$ETS INC.</h1>
