@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('2nd page.png') no-repeat left center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 120px;
+}
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    position: relative; /* Allows you to move the logo independently */
+    top: 40px; /* Moves the logo down */
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 60px;
+    font-size: 30px;
+    position: relative; /* Allows you to use top positioning */
+    top: 30px; /* Lowers the links */
+    font-style: italic; /* Make the text italic */
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 80px);
+    padding-left: 100px;
+    margin-top: -70px; /* Moves the container down */
+}
+
+.login-box {
+    background-color: #fff; /* Light background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px 60px; /* Padding inside the box */
+    width: 550px; /* Adjust width to match the second image */
+    text-align: center; /* Center-align text */
+    color: #333; /* Dark text color */
+}
+
+.login-box h2 {
+    font-size: 50px; /* Keep the font size */
+    line-height: 1.2; /* Adjust line height */
+    margin-top: 0; /* Remove extra spacing above the heading */
+    padding-top: 10px; /* Add minimal padding if needed */
+    margin-bottom: 10px; /* Keep spacing below the heading */
+}
+
+.login-subtitle {
+    font-size: 20px; /* Adjust font size for "Login" */
+    margin-top: 0; /* Remove extra spacing above */
+    margin-bottom: 20px; /* Add spacing below */
+    color: #333; /* Subtle gray color */
+    font-weight: bold; /* Make it bold */
+    font-style: italic; /* Make it italic */
+}
+
+.input-field {
+    width: 100%; /* Full width of the container */
+    padding: 12px; /* Adjust padding for input fields */
+    margin: 10px 0; /* Spacing between input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    background-color: #000; /* Set background to black */
+    color: #fff; /* Set text color to white */
+    caret-color: #fff; /* Set the cursor color to white */
+}
+
+.input-field::placeholder {
+    color: #fff; /* Set placeholder text color to white */
+    opacity: 1; /* Ensure full opacity for the placeholder */
+}
+
+.forgot-password {
+    display: block; /* Ensure it appears on its own line */
+    margin-top: -5px; /* Reduce the space above the link to bring it closer to the password box */
+    margin-bottom: 20px; /* Increase the space below the link to push it farther from the login button */
+    font-size: 14px; /* Adjust font size */
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    text-align: left; /* Align the text */
+    font-weight: bold; /* Make the text bold */
+    font-style: italic; /* Make the text italic */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.login-button {
+    width: auto; /* Change from 100% to auto for a smaller width */
+    padding: 8px 130px; /* Reduce padding for a smaller button */
+    font-size: 16px; /* Adjust font size to make it smaller */
+    font-style: italic; /* Make the button text italic */
+    background-color: #333; /* Keep the same background color */
+    color: #fff; /* Keep the same text color */
+    border: none; /* Keep border removed */
+    border-radius: 5px; /* Keep rounded corners */
+    cursor: pointer; /* Keep pointer cursor on hover */
+}
+
+.login-button:hover {
+    background-color: #000000; /* Darker blue on hover */
+}
+
+.signup-redirect a {
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    font-style: italic; /* Make the text italic */
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

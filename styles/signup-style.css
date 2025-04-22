@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('2nd page.png') no-repeat left center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 120px;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 60px;
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    font-style: italic;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 80px);
+    padding-left: 100px;
+    margin-top: -70px; /* Moves the container down */
+}
+
+.signup-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 60px;
+    width: 550px;
+    text-align: center;
+    color: #333;
+}
+
+.signup-box h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.signup-subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+}
+
+.input-field::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.signup-button {
+    width: auto;
+    padding: 8px 130px;
+    font-size: 16px;
+    font-style: italic;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: #000;
+}
+
+.signup-redirect {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-redirect a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.signup-redirect a:hover {
+    text-decoration: underline;
+}

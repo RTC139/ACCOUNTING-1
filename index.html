@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="pages/account.html">Accounting</a></li>
+                <li><a href="pages/tax.html">Tax</a></li>
+                <li><a href="pages/support.html">Support</a></li>
+                <li><a href="pages/assistant.html">Assistant</a></li>
+            </ul>
+            <a href="pages/login.html" class="login-button">LOG IN</a>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>B1G A$$ETS INC.</h1>
+            <div class="tagline">
+                <span>Save.</span>
+                <span>Plan.</span>
+                <span>Manage.</span>
+            </div>
+        </div>
+        
+        <div class="description">
+            <p>Our goal is to find an easy way to streamline your finances with our accurate and easy-to-use Accounting & Tax Calculator.</p>
+            <br>
+            <p>Designed for professionals and businesses, it helps you quickly estimate taxes, manage expenses, and stay compliant with the latest regulations — all in one convenient tool.</p>
+        </div>
+        
+        <!-- Admin control panel (hidden by default) -->
+        <div class="admin-control" style="margin-top: 50px; text-align: center; display: none;">
+            <button onclick="clearAllAccounts()" style="background-color: #d4af37; padding: 10px 20px; color: black; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                Clear All Accounts
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Function to clear all accounts from localStorage
+        function clearAllAccounts() {
+            // Clear specific account data
+            localStorage.removeItem('accounts');
+            // Clear all data
+            localStorage.clear();
+            console.log('All accounts have been cleared from localStorage');
+            alert('All accounts have been cleared successfully');
+        }
+        
+        // Function to show admin controls - can be called from console with: showAdminControls()
+        function showAdminControls() {
+            document.querySelector('.admin-control').style.display = 'block';
+        }
+        
+        // Function to hide admin controls
+        function hideAdminControls() {
+            document.querySelector('.admin-control').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

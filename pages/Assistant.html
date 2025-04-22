@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Assistant</title>
+    <link rel="stylesheet" href="../styles/assistant-style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <h1 class="logo">BIG A$$ETS INC.</h1>
+        <nav>
+            <a href="../index.html" class="nav-button">Home</a>
+            <a href="accounting.html" class="nav-button">Accounting</a>
+            <a href="tax.html" class="nav-button">Tax</a>
+            <a href="support.html" class="nav-button">Support</a>
+            <a href="Assistant.html" class="nav-button active">Assistant</a>
+        </nav>
+    </header>
+
+    <!-- Assistant Section -->
+    <main class="assistant-container">
+        <section class="financial-advisor">
+            <div id="advisor-response" class="response-box">
+                <!-- This is where the results will appear -->
+            </div>
+            <textarea id="advisor-input" placeholder="Type your question here..."></textarea>
+            <button id="advisor-submit">Ask</button>
+        </section>
+    </main>
+
+    <script src="../scripts/financial-advisor.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

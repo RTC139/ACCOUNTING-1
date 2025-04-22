@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../styles/signup-style.css">
+    <script src="../scripts/storage.js" defer></script>
+    <script src="../scripts/auth.js" defer></script>
+    <style>
+        /* Password field container */
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        /* Toggle button styling */
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">BIG A$$ETS INC.</h1>
+        <nav>
+            <a href="#" class="nav-link">Support</a>
+            <a href="../index.html" class="nav-link">Home</a>
+        </nav>
+    </header>
+    <main class="signup-container">
+        <div class="signup-box">
+            <h2>Make an account!</h2>
+            <p class="signup-subtitle">Sign in</p>
+            <form id="signup-form">
+                <input type="text" class="input-field" id="username" placeholder="Please type your username here" required>
+                
+                <!-- Password field with toggle button -->
+                <div class="password-container">
+                    <input type="password" class="input-field" id="password" placeholder="Please type your password here" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password', this)">Show</button>
+                </div>
+                
+                <!-- Confirm password field with toggle button -->
+                <div class="password-container">
+                    <input type="password" class="input-field" id="confirm-password" placeholder="Please confirm your password here" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('confirm-password', this)">Show</button>
+                </div>
+                
+                <button type="submit" class="signup-button">Sign up</button>
+            </form>
+            <p class="signup-redirect">Have an existing account? <a href="login.html">Click here to login.</a></p>
+        </div>
+    </main>
+    <footer>All rights reserved to APC 2025</footer>
+    <script>
+        // Password visibility toggle function
+        function togglePasswordVisibility(inputId, button) {
+            const passwordField = document.getElementById(inputId);
+            
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                button.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                button.textContent = "Show";
+            }
+        }
+        
+        // Form submission handler
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password === confirmPassword) {
+                // Call function to save user data
+                saveUserData(username, password);
+                // Redirect to login page
+                window.location.href = 'login.html';
+            } else {
+                alert("Passwords do not match!");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting - BIG A$$ETS INC.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/Account-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>BIG A$$ETS INC.</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="tax.html">Tax</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="calculator-panel">
+                <div class="return-button">
+                    <button class="btn btn-warning">Return</button>
+                </div>
+                
+                <div class="calculator-sections row">
+                    <!-- Income Section -->
+                    <div class="calculator-section col-md-6">
+                        <h2>Income</h2>
+                        <div class="container px-4">
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount type here.">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount type here.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount here.">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount here.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-button-container">
+                            <button class="add-button">+ Add</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Expenses Section -->
+                    <div class="calculator-section col-md-6">
+                        <h2>Expenses</h2>
+                        <div class="container px-4">
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount type here.">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount type here.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount here.">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Please type the amount here.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-button-container">
+                            <button class="add-button">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add the new squares here, after calculator-sections and before results-section -->
+                <div class="info-squares-container">
+                    <div class="info-square left-square">
+                    </div>
+                    <div class="info-square right-square">
+                    </div>
+                </div>
+                
+                <!-- Results Section -->
+                <div class="results-section">
+                    <div class="calculate-button">
+                        <button id="calculate">Calculate</button>
+                    </div>
+                    
+                    <div class="net-income">
+                        <h3>Net incomes in....</h3>
+                        <div class="results-row">
+                            <div class="result-group">
+                                <span class="result-label">A month:</span>
+                                <span class="result-value" id="monthly-result">__________</span>
+                            </div>
+                            <div class="result-group">
+                                <span class="result-label">
+                                    <input type="text" class="period-input" value=""> months:
+                                </span>
+                                <span class="result-value" id="months-result">__________</span>
+                            </div>
+                            <div class="result-group">
+                                <span class="result-label">
+                                    <input type="text" class="period-input" value=""> years:
+                                </span>
+                                <span class="result-value" id="years-result">__________</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../scripts/account.js"></script>
+</body>
+</html>

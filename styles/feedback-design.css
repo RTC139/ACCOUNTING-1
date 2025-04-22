@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../3rd page.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0; /* Remove horizontal padding */
+    width: 100%;
+    position: relative; /* Add this to support absolute positioning of children */
+}
+
+/* Adjust logo positioning */
+.logo {
+    margin-left: -80px; /* Negative margin pushes it left */
+    position: relative;
+    left: 20px; /* Alternative to negative margin */
+}
+
+.logo h1 {
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+    top: 10px; /* Reduced from 40px to align better */
+}
+
+/* Adjust navigation positioning */
+nav {
+    margin-right: -100px; /* Negative margin pushes it right */
+    position: relative;
+    right: 20px; /* Alternative to negative margin */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 60px; /* Space between nav items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* No margin for first item */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    top: 15px; /* Reduced from 30px to align better */
+}
+
+/* Add underline effect on hover for navigation links */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-top: 100px;
+}
+
+/* Page title */
+.page-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Feedback container */
+.feedback-container {
+    background-color: #1c323d;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Envelope image */
+.envelope-image {
+    margin: 20px auto 30px;
+    width: 200px;
+}
+
+.envelope-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Feedback message */
+.feedback-message {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.feedback-follow-up {
+    font-size: 1.1rem;
+    color: #d4af37;
+}

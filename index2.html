@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Assets Inc.</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="scripts/auth.js" defer></script>
+    <script src="scripts/storage.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <div class="nav-links">
+                <a href="pages/accounting.html" class="nav-item">Accounting</a>
+                <a href="pages/tax.html" class="nav-item">Tax</a>
+                <a href="pages/support.html" class="nav-item">Support</a>
+                <a href="pages/assistant.html" class="nav-item">Assistant</a>
+            </div>
+            <div class="user-profile">
+                <img src="Accountant pic.png" alt="User Profile" class="profile-icon">
+                <div id="username-display">(Username)</div>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>BIG A$$ETS INC.</h1>
+            <div class="taglines">
+                <p class="tagline">Save.</p>
+                <p class="tagline">Plan.</p>
+                <p class="tagline">Manage.</p>
+            </div>
+        </div>
+        
+        <div class="description">
+            <p>Our goal is to find an easy way to streamline your finances with our accurate and easy-to-use Accounting & Tax Calculator.</p>
+            <p>Designed for professionals and businesses, it helps you quickly estimate taxes, manage expenses, and stay compliant with the latest regulations — all in one convenient tool.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Display the logged-in username
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = getUserData();
+            const usernameDisplay = document.getElementById('username-display');
+            
+            if (userData && userData.username) {
+                usernameDisplay.textContent = userData.username;
+            } else {
+                // If no user is logged in, redirect to login page
+                window.location.href = "pages/login.html";
+            }
+        });
+    </script>
+</body>
+</html>

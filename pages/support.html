@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - BIG A$$ETS INC.</title>
+    <link rel="stylesheet" href="../styles/support-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>BIG A$$ETS INC.</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="tax.html">Tax</a></li>
+                    <li><a href="accounting.html">Accounting</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2 class="page-title">We'd Love to Hear From You!</h2>
+            
+            <div class="form-container">
+                <p class="form-instructions">
+                    Please fill out the form below and our support team will reach out to you as soon as possible.
+                </p>
+                
+                <form id="support-form">
+                    <div class="form-field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="message">Message/Inquiry</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-field">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        document.getElementById('support-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Check if all required fields are filled
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (name && email && message) {
+                // Show a brief thank you message
+                alert('Thank you for your message! Our support team will contact you soon.');
+                
+                // Reset the form
+                this.reset();
+                
+                // Redirect to feedback.html
+                window.location.href = "feedback.html";
+            }
+        });
+    </script>
+</body>
+</html>
