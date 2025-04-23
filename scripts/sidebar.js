@@ -29,35 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Improved Logout functionality
+    // ...existing code...
+
+    // Simplified Logout functionality - just redirects without affecting saved data
     if (logoutButton) {
         logoutButton.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Get current user data
-            let userData = null;
-            try {
-                userData = JSON.parse(localStorage.getItem('userData'));
-            } catch (e) {
-                // If there's an error parsing, start with empty object
-                userData = {};
-            }
-            
-            // Save the username and any other account info
-            const savedInfo = {
-                username: userData?.username,
-                email: userData?.email,
-                // Add any other account info you want to preserve
-            };
-            
-            // Set logged in status to false instead of deleting data
-            localStorage.setItem('userData', JSON.stringify({
-                ...savedInfo,
-                isLoggedIn: false
-            }));
-            
-            // Redirect to login page
-            window.location.href = "pages/login.html";
+            // Simply redirect to the home page
+            window.location.href = "index.html";
         });
     }
 });
