@@ -29,7 +29,11 @@
                     Please fill out the form below and our support team will reach out to you as soon as possible.
                 </p>
                 
-                <form id="support-form">
+                <!-- Updated form that sends to email -->
+                <form id="support-form" onsubmit="sendEmail(event)">
+                    <!-- Remove FormSubmit specific fields -->
+                    
+                    <!-- Keep your existing form fields -->
                     <div class="form-field">
                         <label for="name">Your name</label>
                         <input type="text" id="name" name="name" required>
@@ -49,30 +53,57 @@
                         <button type="submit" class="submit-btn">Submit</button>
                     </div>
                 </form>
-            </div>
-        </main>
-    </div>
-    
-    <script>
+
+                <!-- Replace your current script with this one -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize messages array in localStorage if it doesn't exist
+        if (!localStorage.getItem('supportMessages')) {
+            localStorage.setItem('supportMessages', JSON.stringify([]));
+        }
+        
+        // Add form submission handler
         document.getElementById('support-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Check if all required fields are filled
+            // Get form data
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
             
             if (name && email && message) {
-                // Show a brief thank you message
-                alert('Thank you for your message! Our support team will contact you soon.');
+                // Create message object
+                const newMessage = {
+                    id: Date.now(), // Timestamp as ID
+                    name: name,
+                    email: email,
+                    message: message,
+                    date: new Date().toLocaleString()
+                };
                 
-                // Reset the form
+                // Get existing messages
+                const messages = JSON.parse(localStorage.getItem('supportMessages'));
+                
+                // Add new message
+                messages.push(newMessage);
+                
+                // Save back to localStorage
+                localStorage.setItem('supportMessages', JSON.stringify(messages));
+                
+                // Show success message and redirect
+                alert('Thank you! Your message has been received.');
+                
+                // Reset form
                 this.reset();
                 
-                // Redirect to feedback.html
+                // Redirect to feedback page
                 window.location.href = "feedback.html";
             }
         });
-    </script>
+    });
+</script>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting System</title>
+    <link rel="stylesheet" href="../styles/Accounting-styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BIG A$$ETS INC.</div>
+        <nav>
+            <ul>
+                <li><a href="#">Tax</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="accounting-panel">
+            <div class="tabs">
+                <button class="redo-btn">
+                    <img src="Redo.png" alt="Return" width="24" height="24">
+                </button>
+                <h2 class="section-title income-title">Income</h2>
+                <h2 class="section-title expense-title">Expenses</h2>
+            </div>
+            
+            <div class="sections-container">
+                <div class="section income-section">
+                    <div class="input-grid">
+                        <div class="column-header">Source</div>
+                        <div class="column-header">AMOUNT</div>
+                        
+                        <div class="input-wrapper">
+                            <button class="input-button">Input Box</button>
+                            <div class="input-dropdown">
+                                <input type="text" class="dropdown-input" placeholder="Enter value...">
+                                <div class="dropdown-buttons">
+                                    <button class="dropdown-add">+ Add</button>
+                                    <button class="dropdown-remove">- Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <button class="input-button">Input Box</button>
+                            <div class="input-dropdown">
+                                <input type="text" class="dropdown-input" placeholder="Enter value...">
+                                <div class="dropdown-buttons">
+                                    <button class="dropdown-add">+ Add</button>
+                                    <button class="dropdown-remove">- Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="combined-btn">View</button>
+                </div>
+                
+                <div class="section expenses-section">
+                    <div class="input-grid">
+                        <div class="column-header">Source</div>
+                        <div class="column-header">AMOUNT</div>
+                        
+                        <div class="input-wrapper">
+                            <button class="input-button">Input Box</button>
+                            <div class="input-dropdown">
+                                <input type="text" class="dropdown-input" placeholder="Enter value...">
+                                <div class="dropdown-buttons">
+                                    <button class="dropdown-add">+ Add</button>
+                                    <button class="dropdown-remove">- Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <button class="input-button">Input Box</button>
+                            <div class="input-dropdown">
+                                <input type="text" class="dropdown-input" placeholder="Enter value...">
+                                <div class="dropdown-buttons">
+                                    <button class="dropdown-add">+ Add</button>
+                                    <button class="dropdown-remove">- Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="combined-btn">View</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="calculate-button">
+                    <button id="calculate">Calculate</button>
+                </div>
+            
+            <div class="net-income">
+                <h3>Net incomes in....</h3>
+                <div class="results-row">
+                    <div class="result-group">
+                        <span class="result-label">A month:</span>
+                        <span class="result-value" id="monthly-result">___________</span>
+                    </div>
+                    <div class="result-group">
+                        <span class="result-label">
+                            <input type="text" class="period-input" value=""> months:
+                        </span>
+                        <span class="result-value" id="months-result">___________</span>
+                    </div>
+                    <div class="result-group">
+                        <span class="result-label">
+                            <input type="text" class="period-input" value=""> years:
+                        </span>
+                        <span class="result-value" id="years-result">___________</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <script src="../scripts/account dropdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Messages</title>
+    <link rel="stylesheet" href="../styles/support-style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #142e3a;
+        }
+        .message-text {
+            max-width: 400px;
+        }
+        .admin-controls {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+        }
+        .admin-controls button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .empty-state {
+            padding: 40px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>BIG A$$ETS INC.</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2 class="page-title">Support Messages</h2>
+            
+            <div class="admin-controls">
+                <button id="refresh-btn">Refresh</button>
+                <button id="clear-btn">Clear All Messages</button>
+            </div>
+            
+            <div id="messages-container">
+                <!-- Messages will be loaded here -->
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const messagesContainer = document.getElementById('messages-container');
+            
+            // Load messages
+            function loadMessages() {
+                const messages = JSON.parse(localStorage.getItem('supportMessages') || '[]');
+                
+                if (messages.length === 0) {
+                    messagesContainer.innerHTML = '<div class="empty-state">No messages yet.</div>';
+                    return;
+                }
+                
+                let tableHtml = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                
+                messages.forEach(msg => {
+                    tableHtml += `
+                        <tr>
+                            <td>${msg.date}</td>
+                            <td>${msg.name}</td>
+                            <td>${msg.email}</td>
+                            <td class="message-text">${msg.message}</td>
+                        </tr>
+                    `;
+                });
+                
+                tableHtml += `
+                        </tbody>
+                    </table>
+                `;
+                
+                messagesContainer.innerHTML = tableHtml;
+            }
+            
+            // Initial load
+            loadMessages();
+            
+            // Refresh button
+            document.getElementById('refresh-btn').addEventListener('click', loadMessages);
+            
+            // Clear all messages
+            document.getElementById('clear-btn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete all messages?')) {
+                    localStorage.setItem('supportMessages', JSON.stringify([]));
+                    loadMessages();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
