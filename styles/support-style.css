@@ -76,12 +76,30 @@ nav ul li a {
     font-size: 30px;
     font-style: italic;
     position: relative;
-    top: 15px; /* Reduced from 30px to align better */
+    top: 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
 }
 
-/* Add underline effect on hover for navigation links */
 nav ul li a:hover {
-    text-decoration: underline;
+    transform: scale(1.15);
+    text-decoration: none;
+}
+
+/* Sliding underline effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Adjust main content positioning to account for the new header spacing */

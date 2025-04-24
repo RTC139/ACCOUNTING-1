@@ -31,6 +31,7 @@ nav.main-nav {
     margin-left: 100px;
 }
 
+/* Nav links hover effect with sliding underline */
 .nav-item {
     margin-right: 150px;
     color: white;
@@ -38,11 +39,30 @@ nav.main-nav {
     font-style: italic;
     font-size: 30px;
     font-weight: 400;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    position: relative; /* Required for absolute positioning of pseudo-element */
 }
 
-/* Add underline effect on hover for navigation links */
 .nav-item:hover {
-    text-decoration: underline;
+    transform: scale(1.15);
+    text-decoration: none;
+}
+
+/* Sliding underline effect */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
 }
 
 /* User profile styles */

@@ -24,13 +24,32 @@ body {
     text-decoration: none;
     margin-left: 60px;
     font-size: 30px;
-    position: relative; /* Allows you to use top positioning */
-    top: 30px; /* Lowers the links */
-    font-style: italic; /* Make the text italic */
+    position: relative;
+    top: 30px;
+    font-style: italic;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+    transform: scale(1.15);
+    text-decoration: none;
+}
+
+/* Sliding underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .login-container {
